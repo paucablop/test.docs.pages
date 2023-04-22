@@ -1,6 +1,6 @@
 title: CHEMOTOOLS
 description: Chemotools integrates chemometrics with sklearn
-baseurl: "/just-the-docs/docs" 
+baseurl: "/test.docs.pages/docs" 
 theme: just-the-docs
 
 url: https://just-the-docs.github.io
