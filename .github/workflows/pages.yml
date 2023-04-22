@@ -41,7 +41,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "/${{ test.docs.pages }}/docs/"
+        run: bundle exec jekyll build --baseurl "/${{ paucablop.test.docs.pages }}/docs/"
         env:
           JEKYLL_ENV: production
 
