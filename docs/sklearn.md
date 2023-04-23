@@ -32,4 +32,4 @@ pipeline = make_pipeline(AirPls(), MultiplicativeScatterCorrection(), StandardSc
 spectra_transformed = pipeline.fit_transform(spectra)
 ```
 
-{% include figures/pipeline.html  %}
+{% include pipeline.html  %}
