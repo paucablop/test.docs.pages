@@ -10,5 +10,9 @@ Some methods for baseline correction are available in the `baseline` module. The
 
 * `baseline_als`: Baseline correction using asymmetric least squares smoothing.
 
-move file location
-<iframe src="multiplicative_signal_correction.html" width="100%" height="500px"></iframe>
+move file location remove frame
+
+<div style="border: none;">
+  <iframe src="multiplicative_signal_correction.html" width="100%"></iframe>
+</div>
+
