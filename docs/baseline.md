@@ -10,7 +10,7 @@ Some methods for baseline correction are available in the `baseline` module. The
 
 * `baseline_als`: Baseline correction using asymmetric least squares smoothing.
 
-figure to figures folder reshape to 800x300
+figure to figures folder reshape to 800x500
 
-<iframe src="figures/multiplicative_signal_correction.html" width="800px" height="300px" style="border: none;"></iframe>
+<iframe src="figures/multiplicative_signal_correction.html" width="800px" height="500px" style="border: none;"></iframe>
 
