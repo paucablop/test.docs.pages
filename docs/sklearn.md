@@ -1,7 +1,8 @@
 ---
-title: Baseline
+title: Sci-kit learn integration
 layout: default
 parent: Docs
+nav_order: 1
 ---
 
 
@@ -32,4 +33,4 @@ pipeline = make_pipeline(AirPls(), MultiplicativeScatterCorrection(), StandardSc
 spectra_transformed = pipeline.fit_transform(spectra)
 ```
 
-{% include pipeline.html  %}
+<iframe src="figures/pipeline.html" width="800px" height="500px" style="border: none;"></iframe>
