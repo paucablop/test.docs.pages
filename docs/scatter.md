@@ -49,6 +49,7 @@ spectra_msc = msc.fit_transform(spectra)
 ```
 
 <iframe src="figures/multiplicative_signal_correction.html" width="800px" height="400px" style="border: none;"></iframe>
+
 ## __Standard normal variate__
 Standard normal variate (SNV) is a preprocessing technique in spectroscopy that adjusts for baseline shifts and variations in signal intensity by subtracting the mean and dividing by the standard deviation of each spectrum.
 
