@@ -12,7 +12,5 @@ Some methods for baseline correction are available in the `baseline` module. The
 
 move file location remove frame
 
-<div style="border: none;">
-  <iframe src="multiplicative_signal_correction.html" width="100%"></iframe>
-</div>
+<iframe src="multiplicative_signal_correction.html" width="120%" height="300px" style="border: none;"></iframe>
 
