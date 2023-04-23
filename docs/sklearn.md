@@ -6,14 +6,13 @@ nav_order: 1
 ---
 
 
-# __Integration with scikit-learn__
+# __Sci-kit learn integration__
 
 ## __Working with single spectra (1D arrays)__
 Preprocessing techniques in scikit-learn are primarily designed to work with 2D arrays, where each row represents a sample and each column represents a feature (i.e., matrices). However, in spectroscopy, single spectra are often of interest, which are represented as 1D arrays (i.e., vectors). To apply scikit-learn and chemotools techniques to single spectra, they need to be reshaped into 2D arrays (i.e., a matrix with one row). To achieve this, you can use the following code that reshapes a 1D array into a 2D array with a single row:
 
 ```python
 import numpy as np
-
 from chemotools.scatter import MultiplicativeScatterCorrection
 
 msc = MultiplicativeScatterCorrection()
