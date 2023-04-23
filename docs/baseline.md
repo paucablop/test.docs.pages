@@ -12,5 +12,5 @@ Some methods for baseline correction are available in the `baseline` module. The
 
 figure to figures folder
 
-<iframe src="figures/multiplicative_signal_correction.html" width="120%" height="500px" style="border: none;"></iframe>
+<iframe src="figures/multiplicative_signal_correction.html" width="100%" height="500px" style="border: none;"></iframe>
 
