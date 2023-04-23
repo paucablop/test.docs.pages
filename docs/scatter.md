@@ -8,9 +8,9 @@ parent: Docs
 
 This package contains three common algorithms for scatter correction in spectroscopy:
 
-- Multiplicative scatter correction (MSC)
-- Standard normal variate (SNV)
-- Extended multiplicative scatter correction (EMSC)
+- [Multiplicative scatter correction (MSC)](#multiplicative-scatter-correction)
+- [Standard normal variate (SNV)](#standard-normal-variante)
+- [Extended multiplicative scatter correction (EMSC)](#extended-multiplicative-scatter-correction)
 
 ## __Multiplicative scatter correction__
 Multiplicative scatter correction (MSC) is a preprocessing technique in spectroscopy that corrects for the influence of light scattering on spectral measurements by dividing each spectrum by a scatter reference spectrum. The current implementation, accepts three types of reference spectra:
