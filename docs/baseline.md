@@ -10,7 +10,7 @@ Baseline correction is a preprocessing technique in spectroscopy that corrects f
 - [Linear baseline correction](#linear-baseline-correction)
 - [Polynomial baseline correction](#polynomial-baseline-correction)
 - [Cubic spline baseline correction](#cubic-spline-baseline-correction)
-- [Alternate iterative reweighed penalized least squares baseline correction (AirPLS)](#alternate-iterative-reweighted-penalized-least-squares-baseline-correction)
+- [Alternate iterative reweighed penalized least squares baseline correction (AirPLS)](##alternate-iterative-reweighed-penalized-least-squares-baseline-correction-airpls)
 - [Non-negative](#non-negative)
 - [Subtract reference spectrum](#subtract-reference-spectrum)
 
@@ -31,10 +31,14 @@ spectra_baseline = lc.fit_transform(spectra)
 ## __Polynomial baseline correction__
 Polynomial baseline correction is a preprocessing technique in spectroscopy that approximates a baseline by fitting a polynomial to selected points of the spectrum. The selected points often correspond to minima in the spectra, and are selected by their index (not by the wavenumber). If no points are selected, the algorithm will select all the points in the spectrum to fit a polynomial of a given order. This case is often called detrending in other spectral processing software.
 
-The following arguments can be set:
+### The following arguments can be set:
 
-- ```order: int``` The order of the polynomial used to fit the samples. _Default: 1_.
-- ```indices: list``` The indices of the points to use for fitting the polynomial. _Default: None_ 
+Argument table:
+
+| Argument | Description | Default |
+| --- | --- | --- |
+| ```order``` | The order of the polynomial used to fit the samples. | 1 |
+| ```indices``` | The indices of the points to use for fitting the polynomial. | None |
 
 
 Usage example:
