@@ -25,7 +25,7 @@ Multiplicative scatter correction (MSC) is a preprocessing technique in spectros
 
 ### __Usage examples__:
 
-__Usage example for the mean spectrum:__
+#### __Usage example for the mean spectrum:__
 
 ```python
 from chemotools.scatter import MultiplicativeScatterCorrection
@@ -34,7 +34,7 @@ msc = MultiplicativeScatterCorrection()
 spectra_msc = msc.fit_transform(spectra)
 ``` 
 
-__Usage example for the median spectrum:__
+#### __Usage example for the median spectrum:__
 
 ```python
 from chemotools.scatter import MultiplicativeScatterCorrection
@@ -43,7 +43,7 @@ msc = MultiplicativeScatterCorrection(use_median=True)
 spectra_msc = msc.fit_transform(spectra)
 ``` 
 
-__Usage example for a single reference spectrum:__
+#### __Usage example for a single reference spectrum:__
 
 ```python
 from chemotools.scatter import MultiplicativeScatterCorrection
