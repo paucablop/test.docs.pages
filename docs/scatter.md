@@ -15,7 +15,7 @@ This package contains three common algorithms for scatter correction in spectros
 ## __Multiplicative scatter correction__
 Multiplicative scatter correction (MSC) is a preprocessing technique in spectroscopy that corrects for the influence of light scattering on spectral measurements by dividing each spectrum by a scatter reference spectrum. The current implementation, accepts three types of reference spectra:
 
-### Arguments:
+### __Arguments__:
 
 | Argument | Description | Type | Default |
 | --- | --- | --- | --- |
@@ -23,7 +23,7 @@ Multiplicative scatter correction (MSC) is a preprocessing technique in spectros
 | ```use_median``` | Whether to use the median spectrum of the dataset as a reference spectrum. | ```bool``` | ```False``` |
 | ```reference``` | The reference spectrum to use for scatter correction. | ```numpy.ndarray``` | ```None``` |
 
-### Usage examples:
+### __Usage examples__:
 
 __Usage example for the mean spectrum:__
 
@@ -52,7 +52,7 @@ msc = MultiplicativeScatterCorrection(reference=reference_spectrum)
 spectra_msc = msc.fit_transform(spectra)
 ```
 
-### Plotting example:
+### __Plotting example__:
 
 <iframe src="figures/multiplicative_signal_correction.html" width="800px" height="400px" style="border: none;"></iframe>
 
@@ -60,12 +60,12 @@ spectra_msc = msc.fit_transform(spectra)
 Standard normal variate (SNV) is a preprocessing technique in spectroscopy that adjusts for baseline shifts and variations in signal intensity by subtracting the mean and dividing by the standard deviation of each spectrum.
 
 
-### Arguments:
+### __Arguments__:
 
 The current implementation does not require any arguments.
 
 
-### Usage example:
+### __Usage example__:
 
 ```python
 from chemotools.scatter import StandardNormalVariate
@@ -74,7 +74,7 @@ snv = StandardNormalVariate()
 spectra_snv = snv.fit_transform(spectra)
 ```
 
-### Plotting example:
+### __Plotting example__:
 <iframe src="figures/standard_normal_variate.html" width="800px" height="400px" style="border: none;"></iframe>
 
 ## __Extended multiplicative scatter correction__
