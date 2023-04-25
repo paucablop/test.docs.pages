@@ -13,6 +13,7 @@ Baseline correction is a preprocessing technique in spectroscopy that corrects f
 - [Alternate iterative reweighed penalized least squares baseline correction (AirPLS)](##alternate-iterative-reweighed-penalized-least-squares-baseline-correction-airpls)
 - [Non-negative](#non-negative)
 - [Subtract reference spectrum](#subtract-reference-spectrum)
+- [Constant baseline correction](#constant-baseline-correction)
 
 ## __Linear baseline correction__
 Linear baseline correction is a preprocessing technique in spectroscopy that corrects for baseline shifts and variations in signal intensity by subtracting a linear baseline from a spectrum. The current implementation subtracts a linear baseline between the first and last point of the spectrum.
@@ -151,3 +152,38 @@ spectra_sr = sr.fit_transform(spectra)
 ### __Plotting example__:
 
 <iframe src="figures/subtract_reference_baseline_correction.html" width="800px" height="400px" style="border: none;"></iframe>
+
+## __Constant baseline correction__
+Constant baseline correction is a preprocessing technique in spectroscopy that corrects for baseline by subtracting a constant value from a spectrum. The constant value is the mean of a region in the spectrum. This processing step is specially useful in UV-Vis spectroscopy, where there can be a large region in the spectra without any absorption.
+
+### __Arguments__:
+
+| Argument | Description | Type | Default |
+| --- | --- | --- | --- |
+|```wavenumbers``` | The wavenumbers of the spectrum. | ```numpy.ndarray``` | ```None``` |
+| ```start``` | The start index of the region to use for calculating the mean. If no wavenumbers are provided, it will take the index of the spectrum. If wavenumbers are provided it will take the index corresponding to the wavenumber | ```int``` | ```0``` |
+| ```end``` | The end index of the region to use for calculating the mean. If no wavenumbers are provided, it will take the index of the spectrum. If wavenumbers are provided it will take the index corresponding to the wavenumber| ```int``` | ```1``` |
+
+### __Usage example__:
+
+#### __Case 1: No wavenumbers provided__
+
+```python
+from chemotools.baseline import ConstantBaselineCorrection
+
+cbc = ConstantBaselineCorrection(start=0, end=30)
+spectra_baseline = cbc.fit_transform(spectra)
+```
+
+#### __Case 2: Wavenumbers provided__
+
+```python
+from chemotools.baseline import ConstantBaselineCorrection
+
+cbc = ConstantBaselineCorrection(wavenumbers=wn,start=950, end=975)
+spectra_baseline = cbc.fit_transform(spectra)
+```
+
+### __Plotting example__:
+
+<iframe src="figures/constant_baseline_correction.html" width="800px" height="400px" style="border: none;"></iframe>
