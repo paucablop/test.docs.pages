@@ -29,17 +29,42 @@ The ```.reshape(1, -1)``` method is applied to the 1D array ```spectra```, which
 
 
 ## __Pipelines integration with scikit-learn__
-All preprocessing techniques in this package are compatible with ```scikit-learn``` and can be used in pipelines. For example, the following code creates a pipeline that performs multiplicative scatter correction, followed by a min-max scaling and a Savitzky-Golay smoothing:
+All preprocessing techniques in this package are compatible with ```scikit-learn``` and can be used in pipelines. For example, the following code creates a pipeline that performs:
+
+- Whittaker smoothing
+- AirPLS baseline correction
+- Multiplicative scatter correction
+- Mean centering
 
 ```python
-from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 
-pipeline = make_pipeline(AirPls(), MultiplicativeScatterCorrection(), StandardScaler(with_std=False)) 
+from chemotools.baseline import AirPls
+fom chemotools.scatter import MultiplicativeScatterCorrection
+from chemotools.smooth import WhittakerSmooth
+
+pipeline = make_pipeline(
+    WhittakerSmooth(),
+    AirPls(),
+    MultiplicativeScatterCorrection(),
+    StandardScaler(with_std=False),
+)
+```
+Now the pileline can be visualized, which will show the sequence of preprocessing techniques that will be applied in the pipeline.
+
+<iframe src="figures/pipeline_visual.html" width="800px" height="500px" style="border: none;"></iframe>
+
+Once the pipeline is created, it can be used to fit and transform the spectra using the ```.fit_transform()``` method.
+
+```python
 spectra_transformed = pipeline.fit_transform(spectra)
 ```
+This will produce the following output:
 
 <iframe src="figures/pipeline.html" width="800px" height="500px" style="border: none;"></iframe>
+
+
 
 ## __Training a PLS model using ```scikit-learn```__
 
