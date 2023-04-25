@@ -46,11 +46,11 @@ Range cut by wavenumber is a preprocessing technique in spectroscopy that select
 
 
 {: .note }
-> The ```RangeCutByWavenumber()``` will store the indices of the selected variables. This is useful when the same range of wavenumbers is used to select variables in different spectra.
+The ```RangeCutByWavenumber()``` will store the indices of the selected variables. This is useful when the same range of wavenumbers is used to select variables in different spectra.
 
 
 {: .warning }
-> The ```wavenumbers``` vector myst be sorted in ascending order.
+The ```wavenumbers``` vector myst be sorted in ascending order.
 
 
 ### __Usage examples__:
