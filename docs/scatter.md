@@ -78,6 +78,10 @@ spectra_snv = snv.fit_transform(spectra)
 <iframe src="figures/standard_normal_variate.html" width="800px" height="400px" style="border: none;"></iframe>
 
 ## __Extended multiplicative scatter correction__
+
+Coming soon
+{: .label .label-yellow }
+
 Extended multiplicative scatter correction (EMSC) is a preprocessing technique in spectroscopy that corrects for the influence of light scattering and instrumental drift by fitting a mathematical model to a reference spectrum and using it to normalize all spectra in the dataset.
 
 An implementation of the EMSC will be available soon 🤓.
