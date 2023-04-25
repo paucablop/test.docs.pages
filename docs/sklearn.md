@@ -53,7 +53,7 @@ pipeline = make_pipeline(
 ```
 Now the pileline can be visualized, which will show the sequence of preprocessing techniques that will be applied in the pipeline.
 
-<iframe src="figures/pipeline_visual.html" width="800px" height="500px" style="border: none;"></iframe>
+<iframe src="figures/pipeline_visual.html" width="100%" style="border: none;"></iframe>
 
 Once the pipeline is created, it can be used to fit and transform the spectra using the ```.fit_transform()``` method.
 
@@ -66,7 +66,7 @@ This will produce the following output:
 
 
 
-## __Training a PLS model using ```scikit-learn```__
+## __Training a PLS model using scikit-learn__
 
 The following code shows how to train a PLS model using ```scikit-learn```. The following preprocessing are used:
 
